@@ -1,0 +1,15 @@
+body {
+    display: grid;
+    grid-template-rows: 5fr 1fr 4fr;
+    align-items: center;
+    justify-items: center;
+    background-image: url("mine.png");
+}
+
+buttons {
+    size: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-content: space-between;
+}
