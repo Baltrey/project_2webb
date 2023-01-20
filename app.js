@@ -2,17 +2,22 @@ let gold = 0;
 let resetvalue = 0;
 let resetvaluetrue = 1;
 let resetcost = 100000;
+let UpgradeCost = 15;
+let ClickerUpgrade = 200;
+let ClickerUpgrade2 = 2000;
+let ClickerValue = 1;
+
 let goldLable = document.querySelector(".gold-label");
 let resetLable = document.querySelector(".reset-label");
+let UpgradeCostLable = document.querySelector(".Uppgrade-Cost-Lable")
+let ClickerUpgradeLable = document.querySelector(".Clicker-Upgrade-Lable")
+let ClickerUpgradeLable2 = document.querySelector(".Clicker-Upgrade-Lable2")
+
 let goldButton = document.querySelector(".gold-button");
 let autoButton = document.querySelector(".Auto-Button");
 let DynamiteButton = document.querySelector(".Dynamite-Button");
 let TNTButton = document.querySelector(".TNT-Button");
 let resetbutton = document.querySelector(".Reset-button");
-let UpgradeCost = 15;
-let ClickerUpgrade = 200;
-let ClickerUpgrade2 = 2000;
-let ClickerValue = 1;
 
 goldButton.addEventListener("click", addgold);
 autoButton.addEventListener("click", buyUpgrade);
@@ -42,6 +47,7 @@ function buyUpgrade() {
         gold -= UpgradeCost;
         setInterval(addgold, 200);
         UpgradeCost *= 2;
+        UpgradeCostLable.innerHTML = UpgradeCost
     }
 }
 
@@ -50,6 +56,7 @@ function Dynamite() {
         gold -= ClickerUpgrade;
         ClickerValue += 5;
         ClickerUpgrade *= 10;
+        ClickerUpgradeLable.innerHTML = ClickerUpgrade
     }
 }
 function TNT() {
@@ -57,5 +64,6 @@ function TNT() {
         gold -= ClickerUpgrade2;
         ClickerValue *= 5;
         ClickerUpgrade2 *= 10;
+        ClickerUpgradeLable2.innerHTML = ClickerUpgrade2
     }
 }
